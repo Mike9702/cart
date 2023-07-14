@@ -35,11 +35,11 @@ function cart (db, printProducts) {
                             <i class="bx bx-minus"></i>
                         </button>
                         <span class="aticle__quantity-text">${item.qty}</span>
-                        <button type="button" class="article__quantity-btn article--plus" data-id="${item.id}>
+                        <button type="button" class="article__quantity-btn article--plus" data-id="${item.id}">
                             <i class="bx bx-plus"></i>
                         </button>
                     </div>
-                    <button type="button" class="article__btn remove-from-cart" data-id="${item.id}>
+                    <button type="button" class="article__btn remove-from-cart" data-id="${item.id}">
                         <i class="bx bx-trash"></i>
                     </button>
 
@@ -56,6 +56,7 @@ function cart (db, printProducts) {
      }
 
     function addToCart (id, qty = 1) {
+
         const itemFinded = cart.find(i => i.id === id)
 
         if (itemFinded) {
@@ -119,8 +120,8 @@ function cart (db, printProducts) {
 
     //eventos
     productsDOM.addEventListener("click", function (e) {
-        if (e.target.closest(".add--to--cart")) {
-            const id = +e.target.closest(".add--to--cart").dataset.id
+        if (e.target.closest(".add--to-cart")) {
+            const id = +e.target.closest(".add--to-cart").dataset.id
             addToCart(id)
         }
     })  
