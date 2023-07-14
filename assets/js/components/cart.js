@@ -86,7 +86,7 @@ function cart (db, printProducts) {
         printCart()
     }
 
-    function ShowItemsCount () {
+    function showItemsCount () {
         let suma = 0
         for (const item of cart) {
             suma += item.qty
