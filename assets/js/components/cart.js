@@ -50,8 +50,8 @@ function cart (db, printProducts) {
             notifyDOM.classList.add("show--notify")
         }
         cartDOM.innerHTML = htmlCart
-        notifyDOM.innerHTML = ShowItemsCount()
-        countDOM.innerHTML = showTotal()
+        notifyDOM.innerHTML = showItemsCount()
+        countDOM.innerHTML = showItemsCount()
         totalDOM.innerHTML = showTotal()
      }
 
@@ -86,7 +86,7 @@ function cart (db, printProducts) {
         printCart()
     }
 
-    function ShowItemsCount () {
+    function showItemsCount () {
         let suma = 0
         for (const item of cart) {
             suma += item.qty
