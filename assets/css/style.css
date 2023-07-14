@@ -231,6 +231,15 @@ align-items: center;
     align-items: center;  
 }
 
+.nav__menu
+.btn--close:hover{
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transition: .1s ease-in-out;
+    
+}
+
 .nav__link {
     display: flex;
     align-items: center;
@@ -250,19 +259,45 @@ align-items: center;
 }
 
 .nav__btn {
-font-size: 1.25rem;
+    
+    width: var(--sp-2-5);
+    height: var(--sp-2-5);
+    font-size: var(--medium-font);
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.nav__btn:hover {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
 }
 
 .btn--cart {
     position: relative;
+    width: var(--sp-2-5);
+    height: var(--sp-2-5);
+    font-size: var(--medium-font);
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--cart:hover {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
 }
 .notify {
     position: absolute;
-    top: -3px;
-    right: -8px;
+    top: 1px;
+    right: 1px;
     width: 15px;
     height: 15px;
-    background-color: var(--primary-color);
+    background-color: blue;
     font-size: var(--tiny-font);
     color: var(--bg-color);
     display: flex;
@@ -439,10 +474,22 @@ right: 0;
 }
 
 .cart__btn.btn--close {
+    position: absolute;
+    top: var(--sp-1-5);
+    right: var(--sp-0-75);
+    width: var(--sp-2);
+    height: var(--sp-2);
     font-size: var(--medium-font);
+    z-index: var(--z-fixed);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
+}
+
+.cart__btn.btn--close:hover {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
 }
 
 .cart__body {
@@ -533,6 +580,12 @@ right: 0;
     color: var(--bg-color);
     padding: var(--sp-1);
    
+}
+
+.btn--buy:hover {
+    color: var(--bg-color);
+    background-color: var(--primary-color);    
+   transition: .3s ease-in-out;
 }
 
 @media(min-width: 768px) {
